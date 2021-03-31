@@ -460,6 +460,36 @@
     }
 }
 
+//button-load
+
+.button-load {
+
+    &__container {
+        max-width: 1140px;
+        width: 100%;
+        @include flex;
+        margin: 100px auto 100px auto;
+    }
+
+    &__item {
+        max-width: 550px;
+        width: 100%;
+        height: 90px;
+        border: 2px solid #9B9BCA;
+        border-radius: 10px;
+        background: transparent;
+        @include font(18px, #9B9BCA, 500);
+        text-transform: uppercase;
+        transition: .5s;
+
+        &:hover {
+            background: #9B9BCA;
+            color: #FFFFFF;
+            transition: .5s;
+        }
+    }
+}
+
 //adaptive
 
 @media screen and (max-width: 1199px) {

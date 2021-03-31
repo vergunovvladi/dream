@@ -423,6 +423,33 @@
     top: 90px;
     z-index: 2; }
 
+.button-load__container {
+  max-width: 1140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 100px auto 100px auto; }
+
+.button-load__item {
+  max-width: 550px;
+  width: 100%;
+  height: 90px;
+  border: 2px solid #9B9BCA;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 18px;
+  color: #9B9BCA;
+  font-weight: 500;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  transition: .5s; }
+  .button-load__item:hover {
+    background: #9B9BCA;
+    color: #FFFFFF;
+    transition: .5s; }
+
 @media screen and (max-width: 991px) {
   .header__links {
     display: none; }
