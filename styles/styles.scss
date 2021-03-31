@@ -509,6 +509,7 @@
     &__card {
         max-width: 442px;
         width: 100%;
+        margin: 0 auto;
         box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         @include flex(center, center, column);
@@ -665,6 +666,13 @@
 
         &__container {
             margin: 20px auto 20px auto;
+        }
+    }
+
+    .feature {
+
+        &__container {
+            margin: 50px auto 50px auto;
         }
     }
 }
