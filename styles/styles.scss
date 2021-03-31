@@ -490,6 +490,63 @@
     }
 }
 
+//feature
+
+.feature {
+
+    &__container {
+        max-width: 1140px;
+        width: 100%;
+        margin: 150px auto 200px auto;
+    }
+
+    &__card {
+        max-width: 442px;
+        width: 100%;
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        @include flex(center, center, column);
+        box-sizing: border-box;
+    }
+
+    &__image {
+        object-fit: cover;
+        max-width: 339px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        @include font(26px, #000000, 500);
+        margin: 50px auto 20px auto;
+    }
+
+    &__subtitle {
+        @include font(18px, #626780, 400);
+        margin: 0 48px 80px 48px;
+        text-align: center;
+    }
+
+    &__button {
+        position: relative;
+        top: 30px;
+        max-width: 234px;
+        width: 100%;
+        height: 60px;
+        border: 2px solid #9595C9;
+        background: #fff;
+        border-radius: 10px;
+        transition: .5s;
+        @include font(18px, #9595C9, 500);
+
+        &:hover {
+            background: #9595C9;
+            transition: .5s;
+            @include font(18px, #fff, 500);
+        }
+    }
+}
+
 //adaptive
 
 @media screen and (max-width: 1199px) {
