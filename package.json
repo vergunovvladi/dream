@@ -1,0 +1,15 @@
+{
+  "name": "dreamMaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass styles/styles.scss -o css/",
+    "watch": "npm run compile && node-sass ./styles/styles.scss -wo css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
