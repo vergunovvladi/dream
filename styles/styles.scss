@@ -493,6 +493,25 @@
 //feature
 
 .feature {
+    position: relative;
+    height: 1000px;
+
+    &__background {
+        width: 1030px;
+        height: 1030px;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+        right: 60%;
+        top: 150px;
+        z-index: -1;
+
+        &-image {
+            position: absolute;
+            left: 454px;
+            top: 500px;
+        }
+    }
 
     &__wrapper {
         max-width: 1140px;
@@ -511,6 +530,7 @@
         width: 100%;
         margin: 0 auto;
         box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+        background: #fff;
         border-radius: 10px;
         @include flex(center, center, column);
         box-sizing: border-box;
