@@ -500,7 +500,7 @@
         width: 1030px;
         height: 1030px;
         border-radius: 50%;
-        background: red;
+        background: #FFEDEF;
         position: absolute;
         right: 60%;
         top: 150px;
@@ -510,6 +510,66 @@
             position: absolute;
             left: 454px;
             top: 500px;
+        }
+    }
+
+    &__circle-large {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: #FFEDEF;
+        position: absolute;
+        right: -250px;
+        bottom: -215px;
+
+        &--top {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: #FFEDEF;
+            position: absolute;
+            right: -200px;
+            bottom: 280px;
+        }
+    }
+
+    &__circle-medium {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #FFEDEF;
+        position: absolute;
+        right: -100px;
+        bottom: -130px;
+
+        &--top {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #FFEDEF;
+            position: absolute;
+            right: -60px;
+            bottom: 230px;
+        }
+    }
+
+    &__circle-small {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #FFEDEF;
+        position: absolute;
+        right: 20px;
+        bottom: -80px;
+
+        &--top {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #FFEDEF;
+            position: absolute;
+            right: 20px;
+            bottom: 140px;
         }
     }
 
@@ -571,6 +631,39 @@
             transition: .5s;
             @include font(18px, #fff, 500);
         }
+    }
+
+    .review {
+
+        &__container {
+            max-width: 488px;
+            width: 100%;
+            margin: 0 auto;
+            height: 375px;
+            background: #fff;
+            box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+            border-radius: 10px;
+            @include flex(center, flex-start, column);
+        }
+
+        &__text {
+            max-width: 360px;
+            width: 100%;
+            margin: 60px 0 5px 30px;
+            @include font(18px, #9D9D9D, 400);
+        }
+
+        &__user {
+            @include flex(flex-start, center, row);
+            margin-left: 30px;
+
+            &-image {
+                width: 98px;
+                height: 98px;
+            }
+        }
+
+
     }
 }
 
