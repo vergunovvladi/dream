@@ -494,7 +494,8 @@
 
 .feature {
     position: relative;
-    height: 1000px;
+    margin-bottom: 300px;
+    overflow: hidden;
 
     &__background {
         width: 1030px;
@@ -650,7 +651,8 @@
         &__text {
             max-width: 360px;
             width: 100%;
-            margin: 60px 0 5px 30px;
+            padding: 60px 0 5px 30px;
+            box-sizing: border-box;
             @include font(18px, #9D9D9D, 400);
         }
 
@@ -670,7 +672,8 @@
 
             &-raiting {
                 @include flex(center, flex-start, column);
-                margin-left: 50px;
+                padding-left: 50px;
+                box-sizing: border-box;
             }
         }
 
@@ -685,18 +688,101 @@
         &__star-text {
             @include font(12px, #9D9D9D, 400);
         }
+    }
+}
 
-        &__arrow {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: #EEEEEE;
-            @include flex;
-            position: absolute;
-            top: 160px;
-            right: 13px;
+.review__arrow {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #EEEEEE;
+    @include flex;
+    position: absolute;
+    top: 160px;
+    right: 13px;
+}
+
+//enter
+
+.enter {
+
+    &__container {
+        max-width: 1140px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__card {
+        max-width: 708px;
+        width: 100%;
+        height: 566px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.4);
+        border-radius: 10px;
+        @include flex(center, center, column);
+    }
+
+    &__form {
+        @include flex(flex-start, flex-start, column);
+    }
+
+    &__title {
+        @include font(16px, #626780, 400);
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        max-width: 400px;
+        width: 100%;
+        height: 60px;
+        padding: 11px 0 11px 40px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.2);
+        border-radius: 10px;
+        background: #FFFFFF;
+        border: 2px solid #9595C9;
+        @include font(18px, #626780, 500);
+
+        &:focus {
+            outline: #9595C9;
         }
+    }
 
+    &__button {
+        max-width: 260px;
+        width: 100%;
+        height: 60px;
+        margin-bottom: 30px;
+        border: 2px solid #9595C9;
+        border-radius: 5px;
+        background: #FFFFFF;
+        @include font(16px, #9595C9, 500);
+        text-transform: uppercase;
+        transition: .5s;
+
+        &:hover {
+            background: #9595C9;
+            @include font(16px, #FFFFFF, 500);
+            text-transform: uppercase;
+            transition: .5s;
+        }
+    }
+
+    &__text-item {
+        @include font(19px, #626780, 500);
+    }
+
+    &__link {
+        text-decoration: none;
+        margin-left: 5px;
+        transition: .5s;
+        
+        &:hover {
+            color: red;
+            transition: .5s;
+        }
     }
 }
 
@@ -859,5 +945,24 @@
         &__container {
             margin: 20px auto 20px auto;
         }
+    }
+
+    .review__arrow {
+        display: none;
+    }
+
+    .enter__card {
+        padding: 0 10px 0 10px;
+        box-sizing: border-box;
+    }
+
+    .enter__container {
+        padding: 0 10px 0 10px;
+    }
+
+    body {
+        padding: 0 10px 0 10px;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 }
