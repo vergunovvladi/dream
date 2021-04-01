@@ -644,6 +644,7 @@
             box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
             border-radius: 10px;
             @include flex(center, flex-start, column);
+            position: relative;
         }
 
         &__text {
@@ -661,8 +662,40 @@
                 width: 98px;
                 height: 98px;
             }
+
+            &-name {
+                @include font(18px, #626780, 500);
+                margin-left: 50px;
+            }
+
+            &-raiting {
+                @include flex(center, flex-start, column);
+                margin-left: 50px;
+            }
         }
 
+        &__raiting-text {
+            @include font(16px, #9D9D9D, 400);
+        }
+
+        &__raiting-star {
+            @include flex(flex-start, center, row);
+        }
+
+        &__star-text {
+            @include font(12px, #9D9D9D, 400);
+        }
+
+        &__arrow {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #EEEEEE;
+            @include flex;
+            position: absolute;
+            top: 160px;
+            right: 13px;
+        }
 
     }
 }

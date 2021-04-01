@@ -584,7 +584,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative; }
   .feature .review__text {
     max-width: 360px;
     width: 100%;
@@ -602,6 +603,45 @@
     .feature .review__user-image {
       width: 98px;
       height: 98px; }
+    .feature .review__user-name {
+      font-size: 18px;
+      color: #626780;
+      font-weight: 500;
+      font-family: 'Poppins';
+      margin-left: 50px; }
+    .feature .review__user-raiting {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-left: 50px; }
+  .feature .review__raiting-text {
+    font-size: 16px;
+    color: #9D9D9D;
+    font-weight: 400;
+    font-family: 'Poppins'; }
+  .feature .review__raiting-star {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row; }
+  .feature .review__star-text {
+    font-size: 12px;
+    color: #9D9D9D;
+    font-weight: 400;
+    font-family: 'Poppins'; }
+  .feature .review__arrow {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 160px;
+    right: 13px; }
 
 @media screen and (max-width: 991px) {
   .header__links {
