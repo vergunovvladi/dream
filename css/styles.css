@@ -924,7 +924,8 @@
     padding-top: 20px; }
   .footer__info {
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: center;
+    flex-direction: column-reverse; }
   .footer__text {
     flex-wrap: wrap;
     justify-content: center; }
