@@ -782,16 +782,32 @@
     margin: 50px auto 50px auto; } }
 
 @media screen and (max-width: 575px) {
+  .header__container {
+    padding: 0 10px;
+    box-sizing: border-box; }
   .header__links {
     display: none; }
   .banner {
     margin-bottom: 20px; }
     .banner__title {
       font-size: 50px; }
+  .title__container {
+    padding: 0 10px;
+    box-sizing: border-box; }
   .title__title--left {
     text-align: center; }
   .title__subtitle--left {
     text-align: center; }
+  .people__container {
+    padding: 0 10px;
+    box-sizing: border-box; }
+  .titlePT__container {
+    padding: 0 10px;
+    box-sizing: border-box; }
+  .video__container {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box; }
   .menu {
     display: block; }
   .service__container {
@@ -802,8 +818,4 @@
     padding: 0 10px 0 10px;
     box-sizing: border-box; }
   .enter__container {
-    padding: 0 10px 0 10px; }
-  body {
-    padding: 0 10px 0 10px;
-    box-sizing: border-box;
-    overflow: hidden; } }
+    padding: 0 10px 0 10px; } }

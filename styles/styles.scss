@@ -912,6 +912,12 @@
 @media screen and (max-width: 575px) {
     .header {
 
+        &__container {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        
         &__links {
             display: none;
         }
@@ -927,12 +933,41 @@
 
     .title {
 
+        &__container {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
         &__title--left {
             text-align: center;
         }
 
         &__subtitle--left {
             text-align: center;
+        }
+    }
+
+    .people {
+
+        &__container {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+    }
+
+    .titlePT {
+
+        &__container {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+    }
+
+    .video {
+
+        &__container {
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: border-box;
         }
     }
 
@@ -958,11 +993,5 @@
 
     .enter__container {
         padding: 0 10px 0 10px;
-    }
-
-    body {
-        padding: 0 10px 0 10px;
-        box-sizing: border-box;
-        overflow: hidden;
     }
 }
