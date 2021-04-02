@@ -835,6 +835,46 @@
             transition: .5s;
         }
     }
+
+    &__info {
+        @include flex(space-between, center, row);
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    &__copyright-text {
+        @include font(16px, #E5E5E5, 400);
+    }
+
+    &__text {
+        @include flex(space-between, center, row);
+    }
+
+    &__social {
+        @include flex;
+    }
+
+    &__social-item {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        @include flex;
+        margin-right: 31px;
+
+        &:last-child {
+            margin-right: 123px;
+        }
+    }
+
+    &__logo-item {
+        @include font(20px, #fff, 400);
+        font-family: 'Rammetto One';
+    }
+
+    &__logo-text {
+        @include font(22px, #fff, 500);
+    }
 }
 
 //adaptive
@@ -1056,5 +1096,23 @@
 
     .footer__container {
         padding-top: 20px;
+    }
+
+    .footer__info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__text {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__social-item:last-child {
+        margin-right: 0;
+    }
+
+    .footer__social {
+        margin: 10px 0 10px 0;
     }
 }
