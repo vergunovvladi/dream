@@ -709,7 +709,7 @@
     &__container {
         max-width: 1140px;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 130px auto;
     }
 
     &__card {
@@ -717,6 +717,8 @@
         width: 100%;
         height: 566px;
         margin: 0 auto;
+        padding: 0 10px;
+        box-sizing: border-box;
         background: #FFFFFF;
         box-shadow: 0px 20px 40px rgba(149, 149, 201, 0.4);
         border-radius: 10px;
@@ -781,6 +783,55 @@
         
         &:hover {
             color: red;
+            transition: .5s;
+        }
+    }
+}
+
+//footer
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    @include flex;
+
+    &__background {
+        width: 2240px;
+        height: 2240px;
+        border-radius: 50%;
+        background: #9B9BCA;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__container {
+        max-width: 1140px;
+        width: 100%;
+        padding-top: 170px;
+        box-sizing: border-box;
+    }
+
+    &__links-container {
+        @include flex(center, flex-start, row);
+    }
+
+    &__links {
+        @include flex(flex-start, flex-start, column);
+    }
+
+    &__title {
+        @include font(20px, #FFFFFF, 500);
+        margin-bottom: 12px;
+    }
+
+    &__link {
+        @include font (16px, #E5E5E5, 400);
+        transition: .5s;
+        text-decoration: none;
+
+        &:hover {
+            color: #FFFFFF;
             transition: .5s;
         }
     }
@@ -917,7 +968,7 @@
             box-sizing: border-box;
         }
 
-        
+
         &__links {
             display: none;
         }
@@ -982,16 +1033,28 @@
         }
     }
 
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    .feature__background {
+        overflow: hidden;
+    }
+
     .review__arrow {
         display: none;
     }
 
-    .enter__card {
-        padding: 0 10px 0 10px;
-        box-sizing: border-box;
+    .enter__container {
+        margin-bottom: 20px;
     }
 
-    .enter__container {
-        padding: 0 10px 0 10px;
+    .footer__links-container {
+        @include flex(flex-start, flex-start, row);
+        margin-bottom: 20px;
+    }
+
+    .footer__container {
+        padding-top: 20px;
     }
 }
