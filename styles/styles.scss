@@ -89,12 +89,14 @@
 
 .menu {
     display: none;
+    overflow: hidden;
     
     &__container {
         max-width: 1140px;
         width: 100%;
         margin: 0 auto;
-        position: relative;
+        position: absolute;
+        z-index: 2;
     }
 
     &__logo {
@@ -137,13 +139,16 @@
     }
 
     &__links {
-        width: 100%;
-        height: 0;
+        width: 0;
+        height: calc(100vh - 94px);
         background: red;
         transition: .5s;
         @include flex(flex-start, flex-start, column);
         overflow: hidden;
-
+        position: absolute;
+        top: 94px;
+        left: 100%;
+        
         &-item {
             text-decoration: none;
             @include font(18px, #717784, 500);
@@ -152,10 +157,6 @@
             text-transform: capitalize;
             margin-top: 10px;
             padding-left: 10px;
-
-            &:first-child {
-                margin-top: 100px;
-            }
         }
     }
 }
@@ -179,8 +180,9 @@
 
 #menu:checked~.menu__links {
     width: 100%;
-    height: 100vh;
-    transition: .5s;
+    transition: 1s;
+    overflow: scroll;
+    left: 0;
 }
 
 //banner
@@ -267,7 +269,8 @@
     }
 
     &__card {
-        width: 250px;
+        max-width: 250px;
+        width: 100%;
         height: 250px;
         margin: 0 auto;
         @include flex(center, center, column);
@@ -337,7 +340,7 @@
 
 .video {
     max-width: 1140px;
-    margin: 20px auto 0 auto;
+    margin: 50px auto 0 auto;
 
     &__container {
     position: relative;
@@ -438,7 +441,7 @@
 
     &__text {
         @include font(18px, #402B2B, 400);
-        max-width: 400px;
+        max-width: 390px;
         width: 100%;
     }
 
@@ -494,7 +497,7 @@
 
 .feature {
     position: relative;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
     overflow: hidden;
 
     &__background {
@@ -639,7 +642,7 @@
         &__container {
             max-width: 488px;
             width: 100%;
-            margin: 0 auto;
+            margin: 100px auto 100px auto;
             height: 375px;
             background: #fff;
             box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
@@ -891,8 +894,17 @@
         }
     }
 
+    .menu {
+        display: block;
+    }
+
     .banner {
-        margin-bottom: 20px;
+        height: 100%;
+        margin-bottom: 50px;
+        
+        &__info {
+            margin: 50px auto 50px auto;
+        }
     }
 
     .title {
@@ -906,14 +918,10 @@
         }
     }
 
-    .menu {
-        display: block;
-    }
-
     .service {
 
         &__container {
-            margin: 20px auto 20px auto;
+            margin: 50px auto 50px auto;
         }
 
         &__card {
@@ -925,18 +933,18 @@
 
         &__container {
             @include flex(center, center, column);
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
         &__image {
-            margin-top: 20px;
+            margin-top: 50px;
         }
     }
 
     .video {
 
         &__container {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         }
     }
 
@@ -949,171 +957,225 @@
             }
         }
     }
-}
 
-@media screen and (max-width: 767px) {
-    .header {
-
-        &__links {
-            display: none;
-        }
+    .question {
+        align-items: center;
     }
 
-    .menu {
-        display: block;
-    }
-
-    .banner {
-        margin-bottom: 20px;
-
-        &__info {
-            align-items: center;
-        }
-
-        &__title, &__subtitle {
-            text-align: center;
-        }
-    }
-    .title {
-
-        &__title--left {
-            text-align: center;
-        }
-
-        &__subtitle--left {
-            text-align: center;
-        }
-    }
-
-    .service {
-
-        &__container {
-            margin: 20px auto 20px auto;
-        }
-    }
-
-    .feature {
+    .button-load {
 
         &__container {
             margin: 50px auto 50px auto;
         }
     }
-}
-
-@media screen and (max-width: 575px) {
-    .header {
-
-        &__container {
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
-
-
-        &__links {
-            display: none;
-        }
-    }
-
-    .banner {
-        margin-bottom: 20px;
-
-        &__title {
-            font-size: 50px;
-        }
-    }
-
-    .title {
-
-        &__container {
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
-        &__title--left {
-            text-align: center;
-        }
-
-        &__subtitle--left {
-            text-align: center;
-        }
-    }
-
-    .people {
-
-        &__container {
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
-    }
-
-    .titlePT {
-
-        &__container {
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
-    }
-
-    .video {
-
-        &__container {
-            padding-left: 10px;
-            padding-right: 10px;
-            box-sizing: border-box;
-        }
-    }
-
-    .menu {
-        display: block;
-    }
-
-    .service {
-
-        &__container {
-            margin: 20px auto 20px auto;
-        }
-    }
 
     .feature {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+
+        &__container {
+            margin: 50px auto 70px auto;
+        }
     }
 
-    .feature__background {
-        overflow: hidden;
+    .review {
+
+        &__container {
+            margin: 50px auto 50px auto;
+        }
     }
 
-    .review__arrow {
-        display: none;
+    .enter {
+
+        &__container {
+            margin-bottom: 50px;
+        }
     }
 
-    .enter__container {
-        margin-bottom: 20px;
-    }
+    .footer {
 
-    .footer__links-container {
-        @include flex(flex-start, flex-start, row);
-        margin-bottom: 20px;
-    }
+        &__container {
+            padding-top: 50px;
+        }
 
-    .footer__container {
-        padding-top: 20px;
-    }
-
-    .footer__info {
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column-reverse;
-    }
-
-    .footer__text {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .footer__social-item:last-child {
-        margin-right: 0;
-    }
-
-    .footer__social {
-        margin: 10px 0 10px 0;
+        &__info {
+            margin: 50px 0 30px 0;
+        }
     }
 }
+
+// @media screen and (max-width: 767px) {
+//     .header {
+
+//         &__links {
+//             display: none;
+//         }
+//     }
+
+//     .menu {
+//         display: block;
+//     }
+
+//     .banner {
+        
+
+//         &__info {
+//             align-items: center;
+//         }
+
+//         &__title, &__subtitle {
+//             text-align: center;
+//         }
+//     }
+//     .title {
+
+//         &__title--left {
+//             text-align: center;
+//         }
+
+//         &__subtitle--left {
+//             text-align: center;
+//         }
+//     }
+
+//     .service {
+
+//         &__container {
+//             margin: 20px auto 20px auto;
+//         }
+//     }
+
+//     .feature {
+
+//         &__container {
+//             margin: 50px auto 50px auto;
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 575px) {
+//     .header {
+
+//         &__links {
+//             display: none;
+//         }
+//     }
+
+//     .banner {
+//         height: 100%;
+
+//         &__container {
+            
+//         }
+
+//         &__info {
+//             align-items: center;
+//             padding: 20px 0 20px 0;
+//         }
+
+//         &__title {
+//             text-align: center;
+//             font-size: 46px;
+//         }
+
+//         &__subtitle {
+//             text-align: center;
+//         }
+//     }
+
+//     .title {
+
+//         &__title--left {
+//             text-align: center;
+//         }
+
+//         &__subtitle--left {
+//             text-align: center;
+//         }
+//     }
+
+//     .menu {
+//         display: block;
+//     }
+
+//     .service {
+
+//         &__container {
+//             margin: 20px auto 20px auto;
+//         }
+//     }
+
+//     .questions {
+    
+//         &__container {
+//             padding-top: 20px;
+//         }
+
+//         &__image {
+//             display: none;
+//         }
+//     }
+
+//     .button-load {
+
+//         &__container {
+//             margin: 20px auto 20px auto;
+//         }
+//     }
+
+//     .feature {
+//         margin-bottom: 20px;
+
+//         &__background {
+//             overflow: hidden;
+//         }
+
+//         &__background-image {
+//             display: none;
+//         }
+//     }
+
+//     .review {
+
+//         &__arrow {
+//             display: none;
+//         }
+//     }
+
+//     .enter {
+
+//         &__container {
+//             margin-bottom: 20px;
+//         }
+//     }
+
+//     .footer {
+
+//         &__links-container {
+//             @include flex(flex-start, flex-start, row);
+//             margin-bottom: 20px;
+//         }
+
+//         &__container {
+//             padding-top: 20px;
+//         }
+
+//         &__info {
+//             flex-wrap: wrap;
+//             justify-content: center;
+//             flex-direction: column-reverse;
+//         }
+
+//         &__text {
+//             flex-wrap: wrap;
+//             justify-content: center;
+//         }
+
+//         &__social-item:last-child {
+//             margin-right: 0;
+//         }
+
+//         &__social {
+//             margin: 10px 0 10px 0;
+//         }
+//     }
+// }
