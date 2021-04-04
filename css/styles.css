@@ -141,7 +141,7 @@
     height: 100vh;
     background: #C8C8C8;
     opacity: 0.95;
-    transition: .5s;
+    transition: .3s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,8 +158,6 @@
       transition: .5s;
       text-transform: capitalize;
       padding-bottom: 25px; }
-      .menu__links-item:first-child {
-        padding-top: 25px; }
 
 #menu:checked ~ .menu__logo > .menu__logo-line {
   background: transparent;
