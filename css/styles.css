@@ -155,7 +155,6 @@
       color: #717784;
       font-weight: 500;
       font-family: 'Poppins';
-      margin-right: 58px;
       transition: .5s;
       text-transform: capitalize;
       padding-bottom: 25px; }
@@ -865,6 +864,8 @@
     padding-top: 50px; }
     .questions__container--flex-bottom {
       margin-top: 0; }
+  .questions__image {
+    display: none; }
   .question {
     align-items: center; }
   .button-load__container {
@@ -873,11 +874,89 @@
     margin-bottom: 50px; }
     .feature__container {
       margin: 50px auto 70px auto; }
-  .review__container {
-    margin: 50px auto 50px auto; }
+    .feature__background-image {
+      display: none; }
+    .feature .review__container {
+      margin: 50px auto 50px auto; }
   .enter__container {
-    margin-bottom: 50px; }
+    margin: 50px 0 50px 0; }
+  .enter__card {
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-sizing: border-box; }
   .footer__container {
     padding-top: 50px; }
   .footer__info {
     margin: 50px 0 30px 0; } }
+
+@media screen and (max-width: 767px) {
+  .footer__info {
+    flex-direction: column-reverse; }
+  .footer__copyright {
+    margin-top: 20px; } }
+
+@media screen and (max-width: 575px) {
+  .banner {
+    height: 100%;
+    margin-bottom: 20px; }
+    .banner__info {
+      margin: 20px auto 20px auto;
+      align-items: center; }
+    .banner__title {
+      text-align: center; }
+    .banner__subtitle {
+      text-align: center; }
+  .service__container {
+    margin: 20px auto 20px auto; }
+  .people__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px; }
+  .people__image {
+    margin-top: 20px; }
+  .video__container {
+    margin-bottom: 20px; }
+  .questions__container {
+    padding-top: 20px; }
+  .question {
+    align-items: center; }
+  .button-load__container {
+    margin: 20px auto 20px auto; }
+  .feature {
+    margin-bottom: 20px; }
+    .feature__container {
+      margin: 20px auto 40px auto; }
+    .feature .review__container {
+      margin: 20px auto 20px auto; }
+    .feature .review__arrow {
+      display: none; }
+    .feature .review__text {
+      padding: 20px 0 5px 5px; }
+    .feature .review__user {
+      margin-left: 5px; }
+  .enter__container {
+    margin: 20px 0 20px 0; }
+  .enter__card {
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box; }
+  .footer__container {
+    padding-top: 10px; }
+  .footer__links-container {
+    justify-content: flex-start; }
+  .footer__text {
+    flex-direction: column; }
+  .footer__social {
+    margin-bottom: 10px; }
+    .footer__social-item:last-child {
+      margin-right: 0; }
+  .footer__copyright {
+    margin-top: 10px; }
+  .footer__info {
+    margin: 20px 0 20px 0; } }

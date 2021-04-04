@@ -152,7 +152,6 @@
         &-item {
             text-decoration: none;
             @include font(24px, #717784, 500);
-            margin-right: 58px;
             transition: .5s;
             text-transform: capitalize;
             padding-bottom: 25px;
@@ -960,6 +959,10 @@
                 margin-top: 0;
             }
         }
+
+        &__image {
+            display: none;
+        }
     }
 
     .question {
@@ -979,19 +982,31 @@
         &__container {
             margin: 50px auto 70px auto;
         }
-    }
 
-    .review {
+        &__background-image {
+            display: none;
+        }
 
-        &__container {
-            margin: 50px auto 50px auto;
+        .review {
+
+            &__container {
+                margin: 50px auto 50px auto;
+            }
         }
     }
 
     .enter {
 
         &__container {
-            margin-bottom: 50px;
+            margin: 50px 0 50px 0;
+        }
+
+        &__card {
+            height: 100%;
+            justify-content: flex-start;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            box-sizing: border-box;
         }
     }
 
@@ -1007,179 +1022,154 @@
     }
 }
 
-// @media screen and (max-width: 767px) {
-//     .header {
+@media screen and (max-width: 767px) {
+    .footer {
 
-//         &__links {
-//             display: none;
-//         }
-//     }
+        &__info {
+            flex-direction: column-reverse;
+        }
 
-//     .menu {
-//         display: block;
-//     }
+        &__copyright {
+            margin-top: 20px;
+        }
+    }
+}
 
-//     .banner {
+@media screen and (max-width: 575px) {
+    .banner {
+        height: 100%;
+        margin-bottom: 20px;
         
+        &__info {
+            margin: 20px auto 20px auto;
+            align-items: center;
+        }
 
-//         &__info {
-//             align-items: center;
-//         }
+        &__title {
+            text-align: center;
+        }
 
-//         &__title, &__subtitle {
-//             text-align: center;
-//         }
-//     }
-//     .title {
+        &__subtitle {
+            text-align: center;
+        }
+    }
 
-//         &__title--left {
-//             text-align: center;
-//         }
+    .service {
 
-//         &__subtitle--left {
-//             text-align: center;
-//         }
-//     }
+        &__container {
+            margin: 20px auto 20px auto;
+        }
+    }
 
-//     .service {
+    .people {
 
-//         &__container {
-//             margin: 20px auto 20px auto;
-//         }
-//     }
+        &__container {
+            @include flex(center, center, column);
+            margin-bottom: 20px;
+        }
 
-//     .feature {
+        &__image {
+            margin-top: 20px;
+        }
+    }
 
-//         &__container {
-//             margin: 50px auto 50px auto;
-//         }
-//     }
-// }
+    .video {
 
-// @media screen and (max-width: 575px) {
-//     .header {
+        &__container {
+        margin-bottom: 20px;
+        }
+    }
 
-//         &__links {
-//             display: none;
-//         }
-//     }
+    .questions {
 
-//     .banner {
-//         height: 100%;
+        &__container {
+            padding-top: 20px;
+        }
+    }
 
-//         &__container {
-            
-//         }
+    .question {
+        align-items: center;
+    }
 
-//         &__info {
-//             align-items: center;
-//             padding: 20px 0 20px 0;
-//         }
+    .button-load {
 
-//         &__title {
-//             text-align: center;
-//             font-size: 46px;
-//         }
+        &__container {
+            margin: 20px auto 20px auto;
+        }
+    }
 
-//         &__subtitle {
-//             text-align: center;
-//         }
-//     }
+    .feature {
+        margin-bottom: 20px;
 
-//     .title {
+        &__container {
+            margin: 20px auto 40px auto;
+        }
 
-//         &__title--left {
-//             text-align: center;
-//         }
+        .review {
 
-//         &__subtitle--left {
-//             text-align: center;
-//         }
-//     }
-
-//     .menu {
-//         display: block;
-//     }
-
-//     .service {
-
-//         &__container {
-//             margin: 20px auto 20px auto;
-//         }
-//     }
-
-//     .questions {
+            &__container {
+                margin: 20px auto 20px auto;
+            }
     
-//         &__container {
-//             padding-top: 20px;
-//         }
+            &__arrow {
+                display: none;
+            }
+    
+            &__text {
+                padding: 20px 0 5px 5px;
+            }
 
-//         &__image {
-//             display: none;
-//         }
-//     }
+            &__user {
+                margin-left: 5px;
+            }
+        }
+    }
 
-//     .button-load {
 
-//         &__container {
-//             margin: 20px auto 20px auto;
-//         }
-//     }
+    .enter {
 
-//     .feature {
-//         margin-bottom: 20px;
+        &__container {
+            margin: 20px 0 20px 0;
+        }
 
-//         &__background {
-//             overflow: hidden;
-//         }
+        &__card {
+            height: 100%;
+            justify-content: flex-start;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-sizing: border-box;
+        }
+    }
 
-//         &__background-image {
-//             display: none;
-//         }
-//     }
+    .footer {
 
-//     .review {
+        &__container {
+            padding-top: 10px;
+        }
 
-//         &__arrow {
-//             display: none;
-//         }
-//     }
+        &__links-container {
+            justify-content: flex-start;
+        }
 
-//     .enter {
+        &__text {
+            flex-direction: column;
+        }
 
-//         &__container {
-//             margin-bottom: 20px;
-//         }
-//     }
+        &__social {
+            margin-bottom: 10px;
+        
+            &-item:last-child {
+                margin-right: 0;
+            }
+        }
+        
+        &__copyright {
+            margin-top: 10px;
+        }
 
-//     .footer {
-
-//         &__links-container {
-//             @include flex(flex-start, flex-start, row);
-//             margin-bottom: 20px;
-//         }
-
-//         &__container {
-//             padding-top: 20px;
-//         }
-
-//         &__info {
-//             flex-wrap: wrap;
-//             justify-content: center;
-//             flex-direction: column-reverse;
-//         }
-
-//         &__text {
-//             flex-wrap: wrap;
-//             justify-content: center;
-//         }
-
-//         &__social-item:last-child {
-//             margin-right: 0;
-//         }
-
-//         &__social {
-//             margin: 10px 0 10px 0;
-//         }
-//     }
-// }
+        &__info {
+            margin: 20px 0 20px 0;
+        }
+    }
+    
+}
