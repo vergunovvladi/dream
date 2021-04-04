@@ -144,7 +144,7 @@
         background: #C8C8C8;
         opacity: 0.95;
         transition: .5s;
-        @include flex(flex-start, center, column);
+        @include flex(center, center, column);
         overflow: hidden;
         position: absolute;
         left: 100%;
