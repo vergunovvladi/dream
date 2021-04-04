@@ -140,23 +140,26 @@
 
     &__links {
         width: 0;
-        height: calc(100vh - 94px);
-        background: red;
+        height: 100vh;
+        background: #C8C8C8;
+        opacity: 0.95;
         transition: .5s;
-        @include flex(flex-start, flex-start, column);
+        @include flex(flex-start, center, column);
         overflow: hidden;
         position: absolute;
-        top: 94px;
         left: 100%;
         
         &-item {
             text-decoration: none;
-            @include font(18px, #717784, 500);
+            @include font(24px, #717784, 500);
             margin-right: 58px;
             transition: .5s;
             text-transform: capitalize;
-            margin-top: 10px;
-            padding-left: 10px;
+            padding-bottom: 25px;
+
+            &:first-child {
+                padding-top: 25px;
+            }
         }
     }
 }
@@ -951,6 +954,7 @@
     .questions {
 
         &__container {
+            padding-top: 50px;
 
             &--flex-bottom {
                 margin-top: 0;
