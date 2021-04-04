@@ -155,6 +155,7 @@
             transition: .5s;
             text-transform: capitalize;
             padding-bottom: 25px;
+            white-space: nowrap;
         }
     }
 }
@@ -1042,6 +1043,7 @@
         }
 
         &__title {
+            font-size: 48px;
             text-align: center;
         }
 

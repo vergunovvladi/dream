@@ -157,7 +157,8 @@
       font-family: 'Poppins';
       transition: .5s;
       text-transform: capitalize;
-      padding-bottom: 25px; }
+      padding-bottom: 25px;
+      white-space: nowrap; }
 
 #menu:checked ~ .menu__logo > .menu__logo-line {
   background: transparent;
@@ -903,6 +904,7 @@
       margin: 20px auto 20px auto;
       align-items: center; }
     .banner__title {
+      font-size: 48px;
       text-align: center; }
     .banner__subtitle {
       text-align: center; }
