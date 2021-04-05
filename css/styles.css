@@ -948,8 +948,10 @@
     box-sizing: border-box; }
   .footer__container {
     padding-top: 10px; }
+  .footer__links {
+    width: 180px; }
   .footer__links-container {
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 20px; }
   .footer__text {
     flex-direction: column; }
